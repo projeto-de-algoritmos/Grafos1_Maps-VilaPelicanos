@@ -8,26 +8,24 @@ public class Manager : MonoBehaviour
     [SerializeField]
     private GameObject rectanglePrefab;
 
-    [SerializeField]
-    private List<Node> nodes;
+    public List<Node> graph;
 
     [SerializeField]
     private int[][] matrixAdj;
 
-
     // Start is called before the first frame update
     void Start()
     {
-        nodes ??= new List<Node>();
+        graph ??= new List<Node>();
 
-        int numNodes = nodes.Count;
+        int numNodes = graph.Count;
 
         matrixAdj = new int[numNodes][];
 
         for (int i = 0; i < numNodes; i++)
         {
             matrixAdj[i] = new int[numNodes];
-            nodes[i].setId(i);
+            graph[i].setId(i);
 
             for (int j = 0; j < numNodes; j++)
             {
@@ -40,7 +38,7 @@ public class Manager : MonoBehaviour
 
     public void SetAdj()
     {
-        foreach (Node node in nodes)
+        foreach (Node node in graph)
         {
             int currentNodeId = node.getId();
 

@@ -2,9 +2,16 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Manager : MonoBehaviour
 {
+    [SerializeField]
+    private Image edgePrefab;
+
+    [SerializeField]
+    private Transform parentEdge;
+
     [SerializeField]
     private GameObject rectanglePrefab;
 
@@ -57,27 +64,28 @@ public class Manager : MonoBehaviour
 
                 if (matrixAdj[adjNodeId][currentNodeId] != 1)
                 {
-                    // Calcule a posição média entre os dois nodes adjacentes.
-                    Vector3 position = (node.transform.position + adjNode.transform.position) / 2f;
+                    // Calcule a posição média entre os dois nós adjacentes.
+                    Vector3 position = (node.transform.localPosition + adjNode.transform.localPosition) / 2f;
 
-                    // Calcule o tamanho do retângulo com base na distância entre os nodes adjacentes.
-                    float width = Vector3.Distance(node.transform.position, adjNode.transform.position);
-                    float height = 0.06f; // Defina a espessura do retângulo.
+                    // Calcule a distância entre os nós adjacentes.
+                    float distance = Vector3.Distance(node.transform.localPosition, adjNode.transform.localPosition);
 
-                    // Crie o retângulo usando o prefab.
-                    GameObject rectangle = Instantiate(rectanglePrefab, position, Quaternion.identity);
+                    // Crie a imagem retangular usando o prefab.
+                    Image edgeImage = Instantiate(edgePrefab, position, Quaternion.identity);
 
-                    // Configure o tamanho do retângulo.
-                    rectangle.transform.localScale = new Vector3(width, height, 1f);
+                    // Defina o tamanho da imagem retangular com base na distância entre os nós adjacentes.
+                    edgeImage.rectTransform.sizeDelta = new Vector2(distance, 4f); // 6f é a espessura da linha.
 
-                    // Certifique-se de que o retângulo está alinhado com a linha entre os nodes.
-                    Vector3 direction = (adjNode.transform.position - node.transform.position).normalized;
+                    edgeImage.transform.SetParent(parentEdge);
+                    edgeImage.transform.localPosition = position;
+
+                    // Certifique-se de que a imagem retangular está alinhada com a linha entre os nós.
+                    Vector3 direction = (adjNode.transform.localPosition - node.transform.localPosition).normalized;
                     float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-                    rectangle.transform.rotation = Quaternion.Euler(0f, 0f, angle);
+                    edgeImage.rectTransform.rotation = Quaternion.Euler(0f, 0f, angle);
 
-                    rectangle.transform.position = new Vector3(rectangle.transform.position.x,
-                        rectangle.transform.position.y,
-                        rectangle.transform.position.z + 1);
+                    // Defina a cor da imagem retangular, se necessário.
+                    // edgeImage.color = Color.red;
                 }
             }
         }

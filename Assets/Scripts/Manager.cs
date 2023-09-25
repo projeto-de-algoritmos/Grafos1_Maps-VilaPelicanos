@@ -76,7 +76,7 @@ public class Manager : MonoBehaviour
                     Image edgeImage = Instantiate(edgePrefab, position, Quaternion.identity);
 
                     // Defina o tamanho da imagem retangular com base na distância entre os nós adjacentes.
-                    edgeImage.rectTransform.sizeDelta = new Vector2(distance, 4f); // 6f é a espessura da linha.
+                    edgeImage.rectTransform.sizeDelta = new Vector2(distance, 4f); // 4f é a espessura da linha.
 
                     edgeImage.transform.SetParent(parentEdge);
                     edgeImage.transform.localPosition = position;
@@ -85,9 +85,6 @@ public class Manager : MonoBehaviour
                     Vector3 direction = (adjNode.transform.localPosition - node.transform.localPosition).normalized;
                     float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
                     edgeImage.rectTransform.rotation = Quaternion.Euler(0f, 0f, angle);
-
-                    // Defina a cor da imagem retangular, se necessário.
-                    // edgeImage.color = Color.red;
                 }
             }
         }

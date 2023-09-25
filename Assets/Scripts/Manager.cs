@@ -16,6 +16,10 @@ public class Manager : MonoBehaviour
     private GameObject rectanglePrefab;
 
     public List<Node> graph;
+    public Node startCharacter01;
+    public Node endCharacter01;
+    public Node startCharacter02;
+    public Node endCharacter02;
 
     [SerializeField]
     private int[][] matrixAdj;

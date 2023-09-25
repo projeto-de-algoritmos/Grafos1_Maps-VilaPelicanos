@@ -34,4 +34,9 @@ public class Node : MonoBehaviour
     {
         return nodesAdj.Contains(node) && node != this;
     }
+
+    public void setNodesAdj(List<Node> nodes)
+    {
+        nodesAdj = nodes;
+    }
 }

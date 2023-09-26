@@ -19,6 +19,10 @@ public class Manager : MonoBehaviour
     public AlgorithmBFS algorithBFS;
     public Game game;
 
+    public Slider speedSlider;
+    public float speed = 1;
+    public TextMeshProUGUI speedValue;
+
     public List<Node> graph;
     public Node startCharacter01;
     public Node endCharacter01;
@@ -35,6 +39,7 @@ public class Manager : MonoBehaviour
     void Start()
     {
         slider.onValueChanged.AddListener(UpdateSliderValue);
+        speedSlider.onValueChanged.AddListener(UpdateSpeedValue);
 
         graph ??= new List<Node>();
 
@@ -54,6 +59,12 @@ public class Manager : MonoBehaviour
         }
 
         SetAdj();
+    }
+
+    void UpdateSpeedValue(float newValue)
+    {
+        speed = ((int)newValue);
+        speedValue.text = speed.ToString();
     }
 
     public void StartGame()

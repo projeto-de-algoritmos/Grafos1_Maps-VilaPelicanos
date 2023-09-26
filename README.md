@@ -10,7 +10,7 @@
 | 21/1031092  |  Larissa Gomes Silva |
 
 ## Sobre 
-Os habitantes da Vila Pelicanos precisam constantemente se locomover o mais rápido por ela para chegar nas lojas antes de fecharem, ou encontrar o melhor caminho para dar um presente a outro habitante. Pensando nisso, foi criado um Maps da Vila Pelicanos, para que consigam chegar o mais rápido possível pelo menor caminho ao seu destino. 
+Os habitantes da Vila Pelicanos precisam constantemente se locomover o mais rápido por ela para chegar nas lojas antes de fecharem, ou encontrar o melhor caminho para dar um presente a outro habitante. Pensando nisso, foi criado um Maps da Vila Pelicanos, para que consigam chegar o mais rápido possível pelo menor caminho ao seu destino. Video explicando o projeto se encontra [aqui](https://drive.google.com/drive/u/0/folders/17mAy-KQ0SLIXrEK_aZdi0yy7Ti4nZsFw).
 
 ## Screenshots
 Tela inicial para seleção dos dados, em caso de dúvidas ver sessão de Uso
@@ -28,9 +28,6 @@ Pré-requisitos:
 
 ## Uso 
 Após baixar e iniciar o arquivo .exe, irá aparecer um menu inicial. Ao iniciar o jogo, o usuário deve selecionar um personagem no painel esquerdo, após isso informar quais os nós de inicio e fim clicando no botão início/fim e em seguida no nó escolhido no mapa. Há um painel de controle para regular o volume da música de fundo, além da opacidade das arestas e vértices sobre o mapa da vila e a velocidade de locomoção do aldeão escolhido.
-
-## Video apresentação
-<iframe width="560" height="315" src="https://www.youtube.com/embed/" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 
 

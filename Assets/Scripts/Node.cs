@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Node : MonoBehaviour
 {
@@ -9,6 +10,17 @@ public class Node : MonoBehaviour
 
     [SerializeField]
     private List<Node> nodesAdj = new();
+
+    public Game game;
+
+    private Button button;
+
+    private void Start()
+    {
+        button = GetComponent<Button>();
+
+        button.onClick.AddListener(ClickNode);
+    }
 
     public int getId()
     {
@@ -38,5 +50,10 @@ public class Node : MonoBehaviour
     public void setNodesAdj(List<Node> nodes)
     {
         nodesAdj = nodes;
+    }
+
+    public void ClickNode()
+    {
+        game.SelectionNode(this);
     }
 }

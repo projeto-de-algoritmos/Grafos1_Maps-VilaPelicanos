@@ -80,7 +80,7 @@ public class AlgorithmBFS : MonoBehaviour
 
     public void Start()
     {
-        StartCoroutine(startAlgorithm());
+        //StartCoroutine(startAlgorithm());
     }
 
     IEnumerator startAlgorithm()

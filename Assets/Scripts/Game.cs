@@ -7,6 +7,9 @@ using TMPro;
 public class Game : MonoBehaviour
 {
     public Manager manager;
+    public GameObject prefabChar;
+    public Transform parentChar;
+
     public List<Button> characters;
 
     public Image char01;
@@ -18,6 +21,22 @@ public class Game : MonoBehaviour
     public TextMeshProUGUI endNode02;
     
     public int selectionChar = 1;
+    public int selectionText = 1;
+
+    public void CreateCharacter(Node node, List<Node> nodes)
+    {
+        GameObject characterInstance = Instantiate(prefabChar, parentChar);
+        characterInstance.transform.localPosition = node.gameObject.transform.localPosition;
+
+        Image characterImage = characterInstance.GetComponent<Image>();
+
+        characterImage.sprite = char01.sprite;
+
+        
+
+        characterInstance.GetComponent<Characters>().StartChar(nodes);
+
+    }
 
     public void SelectionCharacter(Characters charac)
     {
@@ -28,6 +47,23 @@ public class Game : MonoBehaviour
         else if (selectionChar == 2)
         {
             char02.sprite = charac.imageChar;
+        }
+    }
+
+    public void setSelectionText(int text)
+    {
+        selectionText = text;
+    }
+
+    public void SelectionNode(Node node)
+    {
+        if (selectionText == 1)
+        {
+            setNodeStart(node);
+        }
+        else 
+        { 
+            setNodeEnd(node);
         }
     }
 

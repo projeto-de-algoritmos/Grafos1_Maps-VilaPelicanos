@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class Menu : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject Stage01;
 
     [SerializeField]
     private CanvasGroup banner;
@@ -41,5 +43,11 @@ public class Menu : MonoBehaviour
         yield return new WaitForSeconds(.5f);
 
         clouds.LeanAlpha(1, 2).setEaseInQuad();
+    }
+
+    public void StartGame()
+    {
+        playButton.GetComponent<Button>().enabled = false;
+        Stage01.LeanMoveLocal(new Vector3(0, 1080, 0), 3f).setEaseInOutQuad();
     }
 }

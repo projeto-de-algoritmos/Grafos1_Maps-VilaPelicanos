@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -20,6 +21,9 @@ public class Manager : MonoBehaviour
     public Node endCharacter01;
     public Node startCharacter02;
     public Node endCharacter02;
+    public int friendship;
+    public Slider slider;
+    public TextMeshProUGUI valueFriendship;
 
     [SerializeField]
     private int[][] matrixAdj;
@@ -27,6 +31,8 @@ public class Manager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        slider.onValueChanged.AddListener(UpdateSliderValue);
+
         graph ??= new List<Node>();
 
         int numNodes = graph.Count;
@@ -45,6 +51,13 @@ public class Manager : MonoBehaviour
         }
 
         SetAdj();
+    }
+
+    // Função chamada quando o valor do slider é alterado.
+    void UpdateSliderValue(float newValue)
+    {
+        friendship = ((int)newValue);
+        valueFriendship.text = friendship.ToString();
     }
 
     public void SetAdj()

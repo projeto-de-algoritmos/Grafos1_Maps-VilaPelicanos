@@ -10,6 +10,13 @@ public class AlgorithmBFS : MonoBehaviour
     private Manager manager;
     private List<Node> newGraph = new();
 
+    struct NewNode
+    {
+        public Dictionary<int, int> ids;
+
+        public List<NewNode> newNodes;
+    }
+
     public void Add_Node(Node node)
     {
         Node newNode = new();
@@ -79,8 +86,6 @@ public class AlgorithmBFS : MonoBehaviour
     IEnumerator startAlgorithm()
     {
         yield return new WaitForSeconds(5);
-
-        AlgorithmBFS algorithmBFS = new();
 
         List<Node> caminho = BFS(manager.graph, manager.graph[47], manager.graph[4]);
 

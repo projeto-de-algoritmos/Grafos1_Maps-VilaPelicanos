@@ -4565,8 +4565,8 @@ MonoBehaviour:
   m_FillRect: {fileID: 968256268}
   m_HandleRect: {fileID: 917737762}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 1
+  m_MinValue: 1
+  m_MaxValue: 20
   m_WholeNumbers: 0
   m_Value: 1
   m_OnValueChanged:
@@ -10184,6 +10184,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   imageChar: {fileID: 21300000, guid: 14ac2f02b7cdbe94bb5ad4cd6d7eb1dc, type: 3}
   game: {fileID: 1945970004}
+  manager: {fileID: 0}
 --- !u!114 &476377148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14835,6 +14836,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   imageChar: {fileID: 21300000, guid: 14ac2f02b7cdbe94bb5ad4cd6d7eb1dc, type: 3}
   game: {fileID: 1945970004}
+  manager: {fileID: 0}
 --- !u!114 &674176589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17353,7 +17355,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0
+  m_text: 1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c94b215ccb10f284fab6d0e64f2e7a8f, type: 2}
   m_sharedMaterial: {fileID: 7422355044696697437, guid: c94b215ccb10f284fab6d0e64f2e7a8f, type: 2}
@@ -18073,6 +18075,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   imageChar: {fileID: 21300000, guid: 14ac2f02b7cdbe94bb5ad4cd6d7eb1dc, type: 3}
   game: {fileID: 1945970004}
+  manager: {fileID: 0}
 --- !u!114 &856965414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30488,6 +30491,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   imageChar: {fileID: 21300000, guid: 14ac2f02b7cdbe94bb5ad4cd6d7eb1dc, type: 3}
   game: {fileID: 1945970004}
+  manager: {fileID: 0}
 --- !u!114 &1397175734
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48853,6 +48857,9 @@ MonoBehaviour:
   rectanglePrefab: {fileID: 8070688648603692312, guid: 7a2eb29f09493ce4fa7b210a5ca8e462, type: 3}
   algorithBFS: {fileID: 2057269990}
   game: {fileID: 1945970004}
+  speedSlider: {fileID: 184242248}
+  speed: 1
+  speedValue: {fileID: 839216403}
   graph:
   - {fileID: 374517974}
   - {fileID: 936025607}

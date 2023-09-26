@@ -30,12 +30,9 @@ public class Game : MonoBehaviour
 
         Image characterImage = characterInstance.GetComponent<Image>();
 
-        characterImage.sprite = char01.sprite;
+        characterImage.sprite = char01.sprite;        
 
-        
-
-        characterInstance.GetComponent<Characters>().StartChar(nodes);
-
+        characterInstance.GetComponent<Characters>().StartChar(nodes, manager);
     }
 
     public void SelectionCharacter(Characters charac)

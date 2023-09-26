@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
@@ -8,9 +9,11 @@ public class Characters : MonoBehaviour
 {
     public Sprite imageChar;
     public Game game;
+    public Manager manager;
 
-    public void StartChar(List<Node> nodes)
+    public void StartChar(List<Node> nodes, Manager _manager)
     {
+        manager = _manager;
         StartCoroutine(Movendo(nodes));
     }
 
@@ -18,8 +21,8 @@ public class Characters : MonoBehaviour
     {
         foreach (Node node in nodes)
         {
-            gameObject.LeanMoveLocal(node.transform.localPosition, 2f).setEaseInOutQuad();
-            yield return new WaitForSeconds(2f);
+            gameObject.LeanMoveLocal(node.transform.localPosition, 2f/manager.speed).setEaseInOutQuad();
+            yield return new WaitForSeconds(2f/manager.speed);
         }
 
         yield return new WaitForSeconds(5f);

@@ -124,4 +124,9 @@ public class Manager : MonoBehaviour
             }
         }
     }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
 }

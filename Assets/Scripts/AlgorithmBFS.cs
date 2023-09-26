@@ -17,23 +17,10 @@ public class AlgorithmBFS : MonoBehaviour
         public List<NewNode> newNodes;
     }
 
-    public void Add_Node(Node node)
-    {
-        Node newNode = new();
-        newNode.setId(node.getId());
-        newNode.setNodesAdj(new List<Node>());
-
-        newGraph.Add(newNode); // O(1)
-    }// Complexidade operação O(1)
-    public void Add_Edge(Node node, Node nodeAdj)
-    {
-        newGraph[newGraph.IndexOf(node)].setNodeAdj(nodeAdj); // O(n)
-        newGraph[newGraph.IndexOf(nodeAdj)].setNodeAdj(node); // O(n)
-    }// Complexidade operação O(n)
-
     public List<Node> BFS(List<Node> nodes, Node s, Node t)
-    {
-        int[] visited = new int[manager.graph.Count];
+    {   // Complexidade operacao O(n+m)
+
+        int[] visited = new int[nodes.Count];
         Array.Fill(visited, -1);
 
         Queue<Node> queue = new();
@@ -44,12 +31,12 @@ public class AlgorithmBFS : MonoBehaviour
         queue.Enqueue(s);
 
         while (queue.Any())
-        {   // O(n)
+        {   // Complexidade operacao O(n), considerando que todos os nos serao emfileirados uma unica vez
 
             Node node = queue.Dequeue();
 
             foreach (Node nodeAdj in node.getNodesAdj())
-            {   // O(m)
+            {   // Complexidade operacao O(m), O(deg(nodeAdj)) para cada vertice, no pior caso percorre todos os nos, sendo um somatorio dos graus de cada no igual a 2m
 
                 int id = nodeAdj.getId();
 
@@ -58,24 +45,25 @@ public class AlgorithmBFS : MonoBehaviour
                     visited[id] = node.getId();
                     queue.Enqueue(nodeAdj);
 
-                    if (nodeAdj == t)
+                    if (nodeAdj.Equals(t))
                     {
                         Node temp = t;
-                        while (temp != s)
-                        {   // O(n)
 
-                            path.Add(temp);
+                        while (!temp.Equals(s))
+                        {   // O(n), pois pode no maximo passar por todos os nos para chegar ao destino
+
+                            path.Insert(0, temp);
                             temp = nodes[visited[temp.getId()]];
+
                         }
-                        path.Add(s);
-                        path.Reverse();
+                        path.Insert(0, s);
                         return path;
                     }
                 }
             }
         }
 
-        return new List<Node>(); // Retorna uma lista vazia quando não há caminho entre s e t
+        return new List<Node>(); // Retorna uma lista vazia quando nao ha caminho entre s e t
     }
 
     public void Start()

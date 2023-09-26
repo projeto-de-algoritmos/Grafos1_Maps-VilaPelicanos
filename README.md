@@ -1,44 +1,36 @@
-**!! Atenção: Renomeie o seu repositório para (Tema)_(NomeDoProjeto). !!** 
-
-Temas:
- - Grafos1
- - Grafos2
- - PD
- - D&C
- - Greed
- - Final 
- 
- **!! *Não coloque os nomes dos alunos no título do repositório*. Exemplo de título correto: Grafos2_Labirinto-do-Minotauro !!**
- 
- (Apague essa seção)
-
-# NomedoProjeto
+# Maps da Vila Pelicanos
 
 **Número da Lista**: X<br>
-**Conteúdo da Disciplina**: XXXXXXXXXX<br>
+**Conteúdo da Disciplina**: Grafos 1<br>
 
 ## Alunos
 |Matrícula | Aluno |
 | -- | -- |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
+| 21/1043467  |  Giovanni Alvissus Camargo Giampauli |
+| 21/1031092  |  Larissa Gomes Silva |
 
 ## Sobre 
-Descreva os objetivos do seu projeto e como ele funciona. 
+Os habitantes da Vila Pelicanos precisam constantemente se locomover o mais rápido por ela para chegar nas lojas antes de fecharem, ou encontrar o melhor caminho para dar um presente a outro habitante. Pensando nisso, foi criado um Maps da Vila Pelicanos, para que consigam chegar o mais rápido possível pelo menor caminho ao seu destino. 
 
 ## Screenshots
-Adicione 3 ou mais screenshots do projeto em funcionamento.
+Tela inicial para seleção dos dados, em caso de dúvidas ver sessão de Uso
+![imagem1](Assets/Images/1.jpeg)
+Tela com os dados selecionados 
+![imagem1](Assets/Images/2.jpeg)
+Menu de configurações
+![imagem1](Assets/Images/3.jpeg)
 
 ## Instalação 
-**Linguagem**: xxxxxx<br>
-**Framework**: (caso exista)<br>
-Descreva os pré-requisitos para rodar o seu projeto e os comandos necessários.
+**Linguagem**: C#<br>
+Pré-requisitos: 
+- Para rodar o projeto como exe, basta ter SO Windows ou possuir biblioteca para rodar exe no Linux.
+- Para rodar o código no computador, é necessário usar a Unity
 
 ## Uso 
-Explique como usar seu projeto caso haja algum passo a passo após o comando de execução.
+Após baixar e iniciar o arquivo .exe, irá aparecer um menu inicial. Ao iniciar o jogo, o usuário deve selecionar um personagem no painel esquerdo, após isso informar quais os nós de inicio e fim clicando no botão início/fim e em seguida no nó escolhido no mapa. Há um painel de controle para regular o volume da música de fundo, além da opacidade das arestas e vértices sobre o mapa da vila e a velocidade de locomoção do aldeão escolhido.
 
-## Outros 
-Quaisquer outras informações sobre seu projeto podem ser descritas abaixo.
+## Video apresentação
+<iframe width="560" height="315" src="https://www.youtube.com/embed/" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 
 

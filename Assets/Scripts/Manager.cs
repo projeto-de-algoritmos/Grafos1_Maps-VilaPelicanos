@@ -111,7 +111,7 @@ public class Manager : MonoBehaviour
                     Image edgeImage = Instantiate(edgePrefab, position, Quaternion.identity);
 
                     // Defina o tamanho da imagem retangular com base na distância entre os nós adjacentes.
-                    edgeImage.rectTransform.sizeDelta = new Vector2(distance, 4f); // 4f é a espessura da linha.
+                    edgeImage.rectTransform.sizeDelta = new Vector2(distance - 20, 4f); // 4f é a espessura da linha.
 
                     edgeImage.transform.SetParent(parentEdge);
                     edgeImage.transform.localPosition = position;

@@ -6,11 +6,11 @@
 ## Alunos
 |Matrícula | Aluno |
 | -- | -- |
-| 21/1043467  |  Giovanni Alvissus Camargo Giampauli |
+| 21/1043647  |  Giovanni Alvissus Camargo Giampauli |
 | 21/1031092  |  Larissa Gomes Silva |
 
 ## Sobre 
-Os habitantes da Vila Pelicanos precisam constantemente se locomover o mais rápido por ela para chegar nas lojas antes de fecharem, ou encontrar o melhor caminho para dar um presente a outro habitante. Pensando nisso, foi criado um Maps da Vila Pelicanos, para que consigam chegar o mais rápido possível pelo menor caminho ao seu destino. Video explicando o projeto se encontra [aqui](https://drive.google.com/file/d/1q9IpBAurN5r5W9EK32KJo3wVC-d1Zk0p/view?usp=sharing).
+Os habitantes da Vila Pelicanos precisam constantemente se locomover o mais rápido por ela para chegar nas lojas antes de fecharem, ou encontrar o melhor caminho para dar um presente a outro habitante. Pensando nisso, foi criado um Maps da Vila Pelicanos, para que consigam chegar o mais rápido possível pelo menor caminho ao seu destino. Video explicando o projeto se encontra no arquivo `Explicacao-do-projeto.mp4`.
 
 ## Screenshots
 Tela inicial para seleção dos dados, em caso de dúvidas ver sessão de Uso
